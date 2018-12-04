@@ -137,7 +137,7 @@ func (sv *configMapVolume) GetPath() string {
 	return sv.plugin.host.GetPodVolumeDir(sv.podUID, strings.EscapeQualifiedNameForDisk(configMapPluginName), sv.volName)
 }
 
-// configMapVolumeMounter handles retrieving secrets from the API server
+// configMapVolumeMounter handles retrieving configMaps from the API server
 // and placing them into the volume on the host.
 type configMapVolumeMounter struct {
 	*configMapVolume
